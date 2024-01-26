@@ -39,9 +39,8 @@ const AboutMe = ({ aboutMe }: AboutMeProps) => {
         <div>
           <ul className="flex flex-wrap justify-center xl:grid xl:grid-cols-2 gap-3 text-xl">
             {techs.map(({ tech, bgcolor, color, link }, index) => (
-              <Link href="">
+              <Link href="" key={tech + index}>
                 <li
-                  key={tech + index}
                   style={{ backgroundColor: bgcolor, color: color }}
                   className="p-2 rounded-lg justify-center flex"
                 >

@@ -1,9 +1,9 @@
-import { Project } from "@/types/Home";
+import { ProjectInterface } from "@/types/Home";
 import Image from "next/image";
 import Link from "next/link";
 
 interface ProjectsProps {
-  projects: Project[];
+  projects: ProjectInterface[];
 }
 
 export const Projects = ({ projects }: ProjectsProps) => {
