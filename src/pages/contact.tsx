@@ -18,9 +18,9 @@ const contatos = () => {
                 href="mailto:davi.pimenta8@gmail.com"
                 className="text-sm md:text-lg text-slate-300 truncate"
               >
-                davi.pimenta8@gmail.com
+                davidev.contato@gmail.com
               </a>
-              <CopyButton textToCopy="davi.pimenta8@gmail.com" />
+              <CopyButton textToCopy="davidev.contato@gmail.com" />
             </div>
           </li>
           <li className="md:text-xl">

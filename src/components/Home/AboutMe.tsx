@@ -4,6 +4,11 @@ import AboutPhoto from "../../../public/me-about.png";
 import { Roboto } from "next/font/google";
 import { AboutMeInterface } from "@/types/Home";
 
+// Icons
+import { TfiEmail } from "react-icons/tfi";
+import { VscGithub } from "react-icons/vsc";
+import { FaLinkedin } from "react-icons/fa";
+
 const roboto = Roboto({
   subsets: ["latin"],
   weight: "400",
@@ -25,10 +30,24 @@ const AboutMe = ({ aboutMe }: AboutMeProps) => {
           </h1>
         </div>
         <div className="mb-12">
-          <h2 className={`${roboto.className} mb-12`}>
-            Meu nome é Davi Silva, sou um desenvolvedor Full Stack apaixonado
-            pela programação, sempre buscando a evolução.
-          </h2>
+          <h2 className={`${roboto.className} mb-10`}>{description}</h2>
+          <div className="flex mb-10 gap-6 justify-center xl:justify-start">
+            <div>
+              <a href="https://www.linkedin.com/in/daviisp/" target="blank">
+                <FaLinkedin className="h-8 w-8 lg:w-8 lg:h-10" />
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/daviisp" target="blank">
+                <VscGithub className="h-8 w-8 lg:w-8 lg:h-10" />
+              </a>
+            </div>
+            <div>
+              <a href="mailto:davi.pimenta8@gmail.com">
+                <TfiEmail className="h-8 w-8 lg:w-8 lg:h-10" />
+              </a>
+            </div>
+          </div>
           <Link
             href={contact.link}
             className="p-3 bg-d-gray-500 w-fit text-xl rounded-lg transition-all hover:opacity-80"
@@ -37,7 +56,7 @@ const AboutMe = ({ aboutMe }: AboutMeProps) => {
           </Link>
         </div>
         <div>
-          <ul className="flex flex-wrap justify-center xl:grid xl:grid-cols-2 gap-3 text-xl">
+          <ul className="flex flex-wrap justify-center xl:grid xl:grid-cols-3 gap-3 text-xl">
             {techs.map(({ tech, bgcolor, color, link }, index) => (
               <Link href="" key={tech + index}>
                 <li
